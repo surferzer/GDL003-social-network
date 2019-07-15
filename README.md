@@ -28,10 +28,9 @@ en los que le gustaría invertir:
 
 ## Objetivos de Aprendizaje
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
+El objetivo principal de aprendizaje de este proyecto es construir una Red Social
 [_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+ en la que podamos **leer y escribir datos.**
 
 Dicho en palabras sencillas, aprenderás a:
 
@@ -69,7 +68,7 @@ trabajar la estructura de su proyecto :smiley:.
 ### Definición del producto
 
 En el `README.md` colocar cómo conociste el mercado de las redes sociales, cómo
-descubriste las necesidades de los usuarios, cómo llegaste  la definición final
+descubriste las necesidades de los usuarios, cómo llegaste a la definición final
 de tu producto. Si tienes fotos de entrevistas, cuestionarios y/o sketches
 (bocetos) compártelos. Es importante que detalles:
 
@@ -183,15 +182,14 @@ Personaliza estas guías con los colores y/o tipografías que creas convenientes
 * Permite comentar o responder una publicación.
 * Permite editar perfil.
 * Permite ver perfil o resumen desde el _muro_ o lista de publicaciones.
+* Que nuestra red social sea [_Single Page Application_](https://es.wikipedia.org/wiki/Single-page_application) 
 
 ### Consideraciones técnicas
 
 El corazón de este proyecto incluye:
 
 * Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Contar con multiples vistas para esto tu aplicacion debera ser una
- [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Que el sitio sea responsive, ya dicho.
+* Que el sitio sea responsive.
 * Alterar y persistir datos. Los datos que agregues o modifiques deberán
   persistir a lo largo de la aplicación, te recomendamos que uses
   [Firebase](https://firebase.google.com/).
@@ -309,7 +307,7 @@ Otras:
 
 ***
 
-## Checklist (no olvides llenarla)
+## Checklist
 
 ### General
 
@@ -366,3 +364,4 @@ Otras:
 * [ ] Permite ver perfil o resumen desde el _muro_ o lista de publicaciones.
 * [ ] Permite ver cuántas marcas, likes, estrellas, corazones o lo que se haya
   elegido, ha recibido una publicación.
+* [ ] Single Page Application
