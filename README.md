@@ -364,4 +364,4 @@ Otras:
 * [ ] Permite ver perfil o resumen desde el _muro_ o lista de publicaciones.
 * [ ] Permite ver cuántas marcas, likes, estrellas, corazones o lo que se haya
   elegido, ha recibido una publicación.
-* [ ] Single Page Application
+* [ ] Single Page Application (Incluye refactorización)
