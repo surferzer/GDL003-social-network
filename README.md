@@ -164,7 +164,7 @@ La interfaz debe permitir lo siguiente:
 * La aplicación no debe dejar hacer publicaciones vacías de ningun tipo.
 * El usuario debe poder agregar, editar y eliminar contenido de la red
   social.
-* El usuario debe poder definir la privacidad de lo que pública.
+* El usuario debe poder definir la privacidad de lo que publica.
 * Al editar contenido, el contenido editado se verá automáticamente,
   inmediatamente después de guardar.
 * Al recargar la página se deben poder ver los contenidos editados.
