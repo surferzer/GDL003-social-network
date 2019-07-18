@@ -10,6 +10,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
+//funcion para registrar
 function registrar(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -29,6 +31,11 @@ function registrar(){
       });
      
 }
+
+
+window.socialNetwork={
+  registrar,
+};
 
 
 
