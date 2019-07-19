@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Lesly-z-c/GDL003-social-network#readme",
   "dependencies": {
-    "firebase": "^6.3.0"
+    "firebase": "^6.3.0",
+    "firebaseui": "^4.1.0"
   }
 }

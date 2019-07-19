@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
 </head>
-<body>
-    <div class="registry">
-        <input type="email" id="email" placeholder="ingresa tu correo electronico">
-        <input type="password" id="password" placeholder="password">
-        <button onclick="registrar()">Check in </button>
-    </div>
-
- 
-
-
+<body> 
+    
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+  
+                  
                 <!-- The core Firebase JS SDK is always required and must be listed first -->
                 <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
                 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
-
-                <!-- TODO: Add SDKs for Firebase products that you want to use
-                    https://firebase.google.com/docs/web/setup#config-web-app -->
-                <script src="data.js" ></script>
+                 <script src="data.js" ></script>
+                
+               
 </body>
 </html>
