@@ -11,6 +11,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
+//funcion para registrar
 function registrar(){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -63,4 +65,12 @@ let uiConfig = {
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
 
+window.socialNetwork={
+  registrar,
+};
+
+
+
+
+  
 ui.start('#firebaseui-auth-container', uiConfig);

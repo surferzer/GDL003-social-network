@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Red Social</title>
+    <link rel="stylesheet" href="style.css"/>
+      
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
-</head>
-<body> 
+    </head>
     
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
+    
+    <body id="origin" class="originM">
+      <div id="firebaseui-auth-container"></div>
+      <div id="loader">Loading...</div>
   
-                  
-                <!-- The core Firebase JS SDK is always required and must be listed first -->
-                <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
-                 <script src="data.js" ></script>
-                
-               
-</body>
+  
+     <div id ="registrar" class="registry">
+        <h1>Welcome to Food Junkies</h1>
+        <img class="logo" src="https://i.ibb.co/3mJ1YFC/Screenshot-2019-07-18-Wix-Logo-Maker-1.png" alt="myLogo">
+        <br><br><label for="lsignUp">Regístrate para ingresar, si aún no tienes una cuenta puedes crear una GRATIS:</label><br> 
+        <input type="email" id="email" placeholder="Ingresa tu correo electronico">
+        <input type="password" id="password" placeholder="In            gresa tu contraseña">
+        <button id="checkIn">Ingresar </button>
+     </div>
+     <div id="muro" class="wall">
+        <h1>Estás en la red Food Junkies</h1>
+        <div id="allContent">
+
+     </div>
+     </div>
+
+ 
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="data.js" ></script>
+    <script src="main.js" ></script>
+    
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+     <script src="data.js" ></script>
+    </body>
+
 </html>
