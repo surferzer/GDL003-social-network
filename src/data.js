@@ -1,22 +1,10 @@
-//se agregan las configuraciones de Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyC_kJkQ9LzVm9XJz-TA9jHMuH-yC367zIU",
-  authDomain: "garnacha-love-rs.firebaseapp.com",
-  databaseURL: "https://garnacha-love-rs.firebaseio.com",
-  projectId: "garnacha-love-rs",
-  storageBucket: "",
-  messagingSenderId: "671471595388",
-  appId: "1:671471595388:web:19cc42fa4d01f3a3"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-
 let ui = new firebaseui.auth.AuthUI(firebase.auth());
-
+//codigo por default para autenticacion con farebaseui 
 let uiConfig = {
   callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+    signInSuccessWitshAuthResult: function(authResult, redirectUrl) {
+      console.log(authResult);
+
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
@@ -29,23 +17,36 @@ let uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: 'index.html',
+  signInSuccessUrl: 'test.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    firebase.auth.GithubAuthProvider.PROVIDER_ID,
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID
+  
   ],
   // Terms of service url.
   tosUrl: 'index.html',
   // Privacy policy url.
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
+
+
 ui.start('#firebaseui-auth-container', uiConfig);
-
-
+//termina codigo por default de autenticacion farebaseui
+//se vincula database con la app para mensajeria en tiempo real 
+// jala el id del contenedor donde se va a imprir el texto 
+/*
+let mensajadedatabase = document.getElementById("postbase") 
+//se llama a database
+let data = firebase.database() 
+//se llama a el id del mensaje que va a jalar de database 
+let mensaje = data.ref('mensaje') 
+// toma el  valor del id de database desde donde se imprime el mensaje una sola vez
+mensaje.once('value').then(function(snap){ 
+//imprime mensaje
+mensajadedatabase.innerText = snap.val() 
+});
+*/
 
 
