@@ -1,4 +1,3 @@
-let ui = new firebaseui.auth.AuthUI(firebase.auth());
 //codigo por default para autenticacion con farebaseui 
 let uiConfig = {
   callbacks: {
@@ -31,7 +30,7 @@ let uiConfig = {
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
 
-
+let ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', uiConfig);
 //termina codigo por default de autenticacion farebaseui
 //se vincula database con la app para mensajeria en tiempo real 
@@ -48,5 +47,3 @@ mensaje.once('value').then(function(snap){
 mensajadedatabase.innerText = snap.val() 
 });
 */
-
-
