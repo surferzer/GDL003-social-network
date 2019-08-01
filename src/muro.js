@@ -106,3 +106,4 @@ document.getElementById('loguedOut').addEventListener('click',function(){
   firebase.auth().signOut();
   location.href='http://localhost:5000/src/';
 });
+document.getElementById('prueba').innerHTML='YA NO HAGAN CAMBIOS POR FAVOR';
