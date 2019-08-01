@@ -1,0 +1,76 @@
+@media (min-width: 375px){
+    .hamburger{
+        background-color: #F84741;
+       
+    }
+    .logotest{
+        float: left;
+        position: flex;
+    }
+    
+
+        #Photouserprofile {
+            float: left;
+        } 
+        
+        #post{
+            float: relative;
+            margin: 2%;
+            padding: 3%;
+            border-radius: 30%;
+        }
+    img{
+        margin: 5%;
+        padding: 3%;
+        border-radius: 50%;
+    }
+    #userprofile{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: center;
+        }
+        
+        .wallButton{
+            width: 10%;
+            padding: 0%;
+            margin: 0%;
+         
+        }
+        #logomuro{
+            border-radius: 0%;
+        }
+        .wallButton{
+            width: 5%;
+            height: 5%;
+            padding: 2%
+        }
+        .likeButton{
+            width: 3%;
+            height: 3%;
+            padding: 1%;
+        }
+        #wallHead{
+            background-color: red;
+        }
+        h1{
+            font-family: 'Cabin Sketch', cursive;
+            font-size: 150%;
+            color: black;
+            text-align: center;
+        }
+        h2{
+            font-family: 'Caveat', cursive;
+            font-size: 100%;
+            color: #FFFFFF;
+            text-align: center;
+        }
+     .wallButton{
+            width: 10%;
+            height: 10%;
+            padding: 4%
+        }
+        .likeButton{
+            width: 4%;
+            height: 4%;
+            padding: 1%;
+        }
+    }
