@@ -20,7 +20,7 @@ const primeraPantalla=()=>{
          email: user.email,
          photo: user.photoURL
       }
-      document.getElementById("Photouserprofile").innerHTML= `<img src=${obj.photo} width="50px" height="50px" >`
+      document.getElementById("Photouserprofile").innerHTML= `<img src=${obj.photo} width="5%" height="5%" >`
       document.getElementById("userprofile").innerHTML=obj.name;
       document.getElementById("useremailprofile").innerHTML=obj.email;
   
@@ -68,15 +68,14 @@ const outputH1= document.querySelector('#outputH1');
 const inputText=document.querySelector('#latest');
 const buttonSave=document.querySelector('#saveButton');
 const buttonLoad=document.querySelector('#loadButton');
-const elOtroBoton=document.querySelector('#inputUsuario');
+
 
 buttonSave.addEventListener('click',function(){
     const textToSave=inputText.value;
-    const otroText=elOtroBoton.value;
-    console.log('Im going to save '+textToSave+otroText+' to Firestore');
+    console.log('Im going to save '+textToSave+' to Firestore');
     docReference.set({    
         losPosts: textToSave,
-        misFotos: otroText
+     
 
     })    .then(function(){
         console.log('Post Guardado!!');
@@ -90,7 +89,7 @@ function obtenerDatosEnTiempoReal(){
       if(doc && doc.exists){
           const myData= doc.data();
           console.log('Verificando la data que estoy recibiendo: ',doc);
-          outputH1.innerHTML='Mi post es: '+myData.losPosts+myData.misFotos;
+          outputH1.innerHTML='Mi post es: '+myData.losPosts;
       };
 
     })

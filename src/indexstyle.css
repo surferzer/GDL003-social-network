@@ -1,22 +1,20 @@
 @media (min-width: 375px){
-    body{  background-image: url("https://data.whicdn.com/images/279442787/large.jpg");
-        background-repeat: no-repeat;
-     
+         body{
+             background-image: url("https://i.pinimg.com/originals/2b/12/b5/2b12b54e590c381d251ed76fdeedfd42.jpg");
+             background-repeat: no-repeat;
              }
         
         #firebaseui-auth-container{
-        position: fixed;
+            position: fixed;
         
-        }
+            }
         #logo{
             position: center;
-         background-size: 20%;
-         padding-left: 4%;
-         padding-right: 5%;
-         padding-top: 8%;
-         padding-bottom: 12%;
-     
-       
-        }
+            background-size: 20%;
+            padding-left: 4%;
+            padding-right: 5%;
+            padding-top: 8%;
+            padding-bottom: 12%;
+            }
       
     }
