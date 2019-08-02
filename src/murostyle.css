@@ -23,26 +23,33 @@
         }
       
         #wallHead{
-            background-color: red;
+            background-color: #ff9e81;
         }
 
-        h1{
-            font-family: 'Cabin Sketch', cursive;
-            font-size: 150%;
-            color: black;
-            text-align: center;
-        }
-        
-        h2{
-            font-family: 'Caveat', cursive;
-            font-size: 100%;
-            color: #FFFFFF;
-            text-align: center;
-        }
-     
+
         .likeButton{
+            width: 3%;
+            height: 3%;
+            padding: 1%;
             width: 4%;
             height: 4%;
             padding: 1%;
         }
+
+        h1{
+            font-family:'Freckle Face', cursive;
+            font-size: 300%;
+            color: black;
+            text-align: center;
+        }
+        h2{
+            font-family: 'Codystar', cursive;
+            font-size: 100%;
+            color: #ffffff;
+            text-align: center;
+        }
+        h3{
+            font-family: 'Buda', cursive;
+        }
+    
     }
