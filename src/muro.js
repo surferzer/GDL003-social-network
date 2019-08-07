@@ -1,35 +1,31 @@
-const primeraPantalla=()=>{
-    document.getElementById("one").style.display ='block';
+
+    const mostrarPerfil= () => {
     document.getElementById("wallHead").style.display ='none';
-    document.getElementById("infoPerfil").style.display ='none';
+    document.getElementById("botones").style.display = 'block';
+    document.querySelector(".inSession").style.display = 'block';
+    document.getElementById("botonesFinales").style.display = "none";
+    document.getElementById("pensando").style.display= "none";
+    console.log("perfil");
     };
-    const segundaPantalla=()=>{
-    document.getElementById("wallHead").style.display ='block';
-    document.getElementById("infoPerfil").style.display ='none';
-    };
-    const mostrarPerfil=()=> {
-    document.getElementById("wallHead").style.display ='none';
-    document.getElementById("infoPerfil").style.display ='block';
-    };
+
    document.getElementById("profile").addEventListener("click", mostrarPerfil);
-   firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      console.log("user.displayName");
-      const obj={
-         name: user.displayName,
-         email: user.email,
-         photo: user.photoURL
-      }
-      document.getElementById("Photouserprofile").innerHTML= `<img src=${obj.photo} width="5%" height="5%" >`
-      document.getElementById("userprofile").innerHTML=obj.name;
-      document.getElementById("useremailprofile").innerHTML=obj.email;
   
-      // User is signed in.
-    } else {
-    }     // No user is signed in.
-    });
+ 
+
+const muro=()=>{
+    document.getElementById("wallHead").style.display ='block';
+    document.getElementById("botones").style.display = 'block';
+    document.querySelector(".inSession").style.display = 'block';
+    document.getElementById("botonesFinales").style.display = "block";
+    document.getElementById("pensando").style.display = "block";
+}
+document.getElementById("wall").addEventListener("click", muro);
+
+
+
 
     //En pagina logIn crea la foto, mail y el id
+ 
 firebase.auth().onAuthStateChanged(function(user){
   if (user){
       // already signed in
@@ -40,9 +36,11 @@ firebase.auth().onAuthStateChanged(function(user){
           id: user.uid
 
       }
+     
       console.log('El usuario activo es: '+dataPerfil.name+ dataPerfil.email+dataPerfil.img+dataPerfil.id);
       document.querySelector('.photo').innerHTML=`<img class="photoProfile" src="${dataPerfil.img}" alt="photo">`;
-      document.querySelector('.name   ').innerHTML=`<h2>${dataPerfil.name}</h2>`;
+      document.querySelector('.name').innerHTML=`<h1>${dataPerfil.name}</h1>`;
+      document.querySelector('.email').innerHTML=`<h1>${dataPerfil.email}</h1>`;
       const setUidUsuario=firebase.firestore().collection('usuarios').doc (dataPerfil.id);
       setUidUsuario.set({
           wallUsuario: "",
@@ -52,30 +50,41 @@ firebase.auth().onAuthStateChanged(function(user){
 
       });
   }
-});
+  });
+    
 
-
-
+   
 
 //AQUI INICIA DATABASE- FIRESTORE
 let firestore= firebase.firestore();
 
 
 //Siempre se va alternar entre colecciones y documentos const docReference= firestore.collection('samples').doc('laMeraData');
-const docReference= firestore.doc('usuarioLogueado/suSeccion'); 
-  
+const docReference= firestore.doc('usuarioLogeado/suSeccion'); 
+
 const outputH1= document.querySelector('#outputH1');
 const inputText=document.querySelector('#latest');
 const buttonSave=document.querySelector('#saveButton');
 const buttonLoad=document.querySelector('#loadButton');
+//const user=firebase.auth().currentUser;
+//const uid=user.uid;
+
 
 
 buttonSave.addEventListener('click',function(){
     const textToSave=inputText.value;
     console.log('Im going to save '+textToSave+' to Firestore');
-    docReference.set({    
-        losPosts: textToSave,
-     
+
+    
+    var newPostKey= firebase.database().ref().child('post').push().key;
+    const docReference1=firestore.doc('/post/' + newPostKey);  
+
+    //var updates={};
+    //updates['/post/' + newPostKey]= dataPerfil;  
+        
+    docReference1.set({    
+        texto: textToSave,
+        autorid: firebase.auth().currentUser.uid   
 
     })    .then(function(){
         console.log('Post Guardado!!');
@@ -105,4 +114,3 @@ document.getElementById('loguedOut').addEventListener('click',function(){
   firebase.auth().signOut();
   location.href='http://localhost:5000/src/';
 });
-document.getElementById('prueba').innerHTML='YA NO HAGAN CAMBIOS POR FAVOR';
